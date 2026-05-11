@@ -1,0 +1,37 @@
+.order-management {
+    margin-left: 230px;
+    padding: 10px 20px 20px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.om-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 10px;
+}
+
+.om-table th, .om-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.om-table th {
+    background: #f2f2f2;
+}
+
+.status-pending { color: #ff8800; font-weight: bold; }
+.status-shipping { color: #0077cc; font-weight: bold; }
+.status-completed { color: #00aa00; font-weight: bold; }
+.status-cancelled { color: #d00000; font-weight: bold; }
+
+.action-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.view-btn { background: #1e88e5; color: white; }
+.cancel-btn { background: #d00000; color: white; }

@@ -1,0 +1,165 @@
+/* check-email.css - CSS cho trang kiểm tra email */
+
+/* Container chính */
+.check-email-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.check-email-icon {
+    font-size: 64px;
+    color: #10b981;
+    margin-bottom: 1.5rem;
+}
+
+.check-email-title {
+    color: #113222;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.check-email-message {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.email-address {
+    color: #113222;
+    font-weight: 600;
+    background: #f0f9ff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 1rem 0;
+    border: 1px solid #bae6fd;
+}
+
+.check-email-instructions {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    margin: 2rem 0;
+    border-left: 4px solid #113222;
+}
+
+.instruction-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.instruction-item:last-child {
+    margin-bottom: 0;
+}
+
+.instruction-icon {
+    color: #113222;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.check-email-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-resend, .btn-back-to-login {
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-resend {
+    background: #113222;
+    color: white;
+}
+
+.btn-resend:hover {
+    background: #0a2417;
+}
+
+.btn-back-to-login {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
+}
+
+.btn-back-to-login:hover {
+    background: #e5e7eb;
+}
+
+.footer-note {
+    margin-top: 2rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.footer-note a {
+    color: #113222;
+    text-decoration: none;
+}
+
+.footer-note a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .check-email-container {
+        margin: 1rem;
+        padding: 2rem;
+    }
+
+    .check-email-buttons {
+        flex-direction: column;
+    }
+
+    .btn-resend, .btn-back-to-login {
+        width: 100%;
+    }
+
+    .check-email-icon {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .check-email-container {
+        padding: 1.5rem;
+    }
+
+    .check-email-title {
+        font-size: 1.5rem;
+    }
+
+    .check-email-message {
+        font-size: 1rem;
+    }
+
+    .email-address {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

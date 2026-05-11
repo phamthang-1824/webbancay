@@ -1,0 +1,24 @@
+.customer-management {
+    margin-left: 230px;
+    padding: 10px 20px 20px 20px;
+}
+
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.customer-table th,
+.customer-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+
+
+
+.customer-table th {
+    background: #f3f3f3;
+}
+

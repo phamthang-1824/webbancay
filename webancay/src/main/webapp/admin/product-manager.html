@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý sản phẩm - Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/sidebar-admin.css"/>
+    <link rel="stylesheet" href="../assets/css/topbar-admin.css"/>
+    <link rel="stylesheet" href="../assets/css/product-manager.css"/>
+    <link rel="stylesheet" href="../assets/css/formAdd.css"/>
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <!-- HEADER -->
+        <header>Quản lý sản phẩm</header>
+        <a href="../admin.jsp" class="menu-item">Dashboard</a>
+        <a href="product-manager.html" class="menu-item">Quản lý sản phẩm</a>
+        <a href="category-manager.html" class="menu-item">Quản lý danh mục</a>
+        <a href="order-manager.html" class="menu-item">Quản lý đơn hàng</a>
+        <a href="user-manager.html" class="menu-item">Khách hàng</a>
+        <a href="home-settings.html" class="menu-item">Banner / Trang chủ</a>
+        <a href="contact-manager.html" class="menu-item">Liên hệ</a>
+    </div>
+
+    <div class="product-management page">
+        <div class="topbar">
+            <div class="controls">
+                <input type="text" class="search" id="searchInput" placeholder="Tìm sản phẩm theo tên, mã sản phẩm...">
+                <button class="btn search">Tìm kiếm</button>
+                <button id="btnAddProduct" class="btn add">Thêm sản phẩm</button>
+            </div>
+        </div>
+
+        <!-- Bảng danh sách sản phẩm -->
+        <table class="pm-table">
+            <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Tên sản phẩm</th>
+                <th>Danh mục</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Trạng thái</th>
+                <th>Hành động</th>
+            </tr>
+            </thead>
+
+            <tbody id="productList">
+            <!-- Sản phẩm sẽ được JS thêm vào đây -->
+            </tbody>
+        </table>
+    </div>
+
+<!--        FORM THÊM SẢN PHẨM      -->
+    <div id="addProductForm" class="form-container hidden">
+        <h2>Thêm sản phẩm cây cảnh</h2>
+
+        <form id="productForm" class="form">
+            <!-- Mã sản phẩm -->
+            <div class="form-group">
+                <label for="productID">Mã sản phẩm</label>
+                <input id="productID" type="text" placeholder="VD: SP001">
+            </div>
+
+            <!-- Tên sản phẩm -->
+            <div class="form-group">
+                <label>Tên sản phẩm</label>
+                <input id="productName" type="text" placeholder="VD: Cây trầu bà Nam Mỹ">
+            </div>
+
+            <!-- Danh mục -->
+            <div class="form-group">
+                <label>Danh mục sản phẩm</label>
+                <select id="productCategory" >
+                    <option value="">-- Chọn danh mục --</option>
+                    <option>Cây văn phòng</option>
+                    <option>Cây mini</option>
+                    <option>Cây phong cảnh</option>
+                </select>
+            </div>
+
+            <!-- Giá -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Giá bán (VNĐ)</label>
+                    <input id="productPrice" type="number" placeholder="VD: 150000">
+                </div>
+
+                <div class="form-group">
+                    <label>Giá khuyến mãi</label>
+                    <input id="productSalePrice" type="number" placeholder="VD: 120000">
+                </div>
+            </div>
+
+            <!-- Số lượng & trạng thái -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Số lượng</label>
+                    <input id="productQuantity" type="number" placeholder="VD: 20">
+                </div>
+
+                <div class="form-group">
+                    <label>Trạng thái</label>
+                    <select id="productStatus">
+                        <option>Còn hàng</option>
+                        <option>Hết hàng</option>
+                        <option>Ngưng bán</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Chiều cao -->
+            <div class="form-group">
+                <label>Chiều cao sản phẩm</label>
+                <input id="productHeight" type="text" placeholder="VD: 20 – 40 cm">
+            </div>
+
+            <!-- Tuổi cây -->
+            <div class="form-group">
+                <label>Tuổi cây</label>
+                <select id="productAge">
+                    <option>Cây non</option>
+                    <option>Cây trưởng thành</option>
+                </select>
+            </div>
+
+            <!-- Mô tả -->
+            <div class="form-group">
+                <label>Mô tả chi tiết sản phẩm</label>
+                <textarea id="productDescription" placeholder="Nhập mô tả chi tiết về cây..."></textarea>
+            </div>
+
+            <!-- Ảnh -->
+            <div class="form-group">
+                <label>Ảnh đại diện</label>
+                <input id="productThumbnail" type="file" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label>Danh sách ảnh mô tả</label>
+                <input id="productGallery" type="file" accept="image/*" multiple>
+            </div>
+
+            <!-- Nút -->
+            <div class="form-buttons">
+                <button type="button" id="cancelProduct" class="btn cancel">Hủy</button>
+                <button type="submit" class="btn submit">Thêm sản phẩm</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../assets/js/product-manager.js"></script>
+
+</body>
+</html>

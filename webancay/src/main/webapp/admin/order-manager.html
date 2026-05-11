@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý đơn hàng - Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/sidebar-admin.css"/>
+    <link rel="stylesheet" href="../assets/css/topbar-admin.css"/>
+    <link rel="stylesheet" href="../assets/css/order-manager.css"/>
+    <link rel="stylesheet" href="../assets/css/order-form.css"/>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <!-- HEADER -->
+        <header>Quản lý đơn hàng</header>
+        <a href="../admin.jsp" class="menu-item">Dashboard</a>
+        <a href="product-manager.html" class="menu-item">Quản lý sản phẩm</a>
+        <a href="category-manager.html" class="menu-item">Quản lý danh mục</a>
+        <a href="order-manager.html" class="menu-item">Quản lý đơn hàng</a>
+        <a href="user-manager.html" class="menu-item">Khách hàng</a>
+        <a href="home-settings.html" class="menu-item">Banner / Trang chủ</a>
+        <a href="contact-manager.html" class="menu-item">Liên hệ</a>
+    </div>
+
+    <!--    QUẢN LÝ ĐƠN HÀNG - ORDER-MANAGEMENT     -->
+    <div class="order-management page hidden">
+
+        <div class="topbar">
+            <div class="controls">
+                <input type="text" class="search" id="searchOrder" placeholder="Tìm theo mã đơn hàng, tên khách hàng…">
+                <select id="statusFilter">
+                    <option value="">Tất cả trạng thái</option>
+                    <option value="pending">Chờ xử lý</option>
+                    <option value="shipping">Đang giao</option>
+                    <option value="completed">Hoàn thành</option>
+                    <option value="cancelled">Đã hủy</option>
+                </select>
+                <button class="btn search">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <!-- Bảng danh sách đơn hàng -->
+        <table class="om-table">
+            <thead>
+            <tr>
+                <th>Mã đơn</th>
+                <th>Khách hàng</th>
+                <th>SĐT</th>
+                <th>Tổng tiền</th>
+                <th>Ngày đặt</th>
+                <th>Trạng thái</th>
+                <th>Hành động</th>
+            </tr>
+            </thead>
+
+            <tbody id="orderList">
+            <!-- Dữ liệu đơn hàng sẽ được JS thêm vào -->
+            </tbody>
+        </table>
+    </div>
+
+<!--        FORM THÊM ĐƠN HÀNG      -->
+    <div class="order-form-wrapper">
+        <h2>Thêm đơn hàng mới</h2>
+
+        <form id="orderForm" class="order-form">
+
+            <!-- Thông tin khách hàng -->
+            <h3>Thông tin khách hàng</h3>
+
+            <div class="form-group">
+                <label>Mã đơn hàng</label>
+                <input type="text" placeholder="VD: DH001">
+            </div>
+
+            <div class="form-group">
+                <label>Tên khách hàng</label>
+                <input type="text" placeholder="Nguyễn Văn A">
+            </div>
+
+            <div class="form-group">
+                <label>Số điện thoại</label>
+                <input type="text" placeholder="0123456789">
+            </div>
+
+            <div class="form-group">
+                <label>Địa chỉ giao hàng</label>
+                <textarea placeholder="Địa chỉ chi tiết"></textarea>
+            </div>
+
+            <!-- Thông tin đơn hàng -->
+            <h3>Thông tin đơn hàng</h3>
+
+            <div class="form-group">
+                <label>Sản phẩm</label>
+                <input type="text" placeholder="Tên sản phẩm">
+            </div>
+
+            <div class="form-group">
+                <label>Số lượng</label>
+                <input type="number" min="1" value="1">
+            </div>
+
+            <div class="form-group">
+                <label>Đơn giá</label>
+                <input type="number" placeholder="Giá bán">
+            </div>
+
+            <div class="form-group">
+                <label>Trạng thái đơn hàng</label>
+                <select>
+                    <option>Chờ xác nhận</option>
+                    <option>Đang giao</option>
+                    <option>Hoàn thành</option>
+                    <option>Đã hủy</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Phương thức thanh toán</label>
+                <select>
+                    <option>COD</option>
+                    <option>Chuyển khoản</option>
+                    <option>Ví điện tử</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Ghi chú</label>
+                <textarea placeholder="Ghi chú thêm cho đơn hàng"></textarea>
+            </div>
+
+            <!-- Nút -->
+            <div class="form-actions">
+                <button type="reset" class="btn cancel">Hủy</button>
+                <button type="submit" class="btn submit">Thêm đơn hàng</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý liên hệ - Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/sidebar-admin.css" />
+    <link rel="stylesheet" href="../assets/css/topbar-admin.css" />
+    <link rel="stylesheet" href="../assets/css/contact-manager.css" />
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <!-- HEADER -->
+        <header>Quản lý liên hệ</header>
+        <a href="../admin.jsp" class="menu-item">Dashboard</a>
+        <a href="product-manager.html" class="menu-item">Quản lý sản phẩm</a>
+        <a href="category-manager.html" class="menu-item">Quản lý danh mục</a>
+        <a href="order-manager.html" class="menu-item">Quản lý đơn hàng</a>
+        <a href="user-manager.html" class="menu-item">Khách hàng</a>
+        <a href="home-settings.html" class="menu-item">Banner / Trang chủ</a>
+        <a href="contact-manager.html" class="menu-item">Liên hệ</a>
+    </div>
+
+    <!--        QUẢN LÝ LIÊN HỆ - contact-messages      -->
+    <div class="contact-messages page hidden">
+
+        <div class="topbar">
+            <div class="controls">
+                <input type="text" class="search" id="searchContact"  placeholder="Tìm theo tên, email, nội dung...">
+                <button class="btn add">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <!-- Bảng danh sách liên hệ -->
+        <table class="contact-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Chủ đề</th>
+                <th>Ngày gửi</th>
+                <th>Trạng thái</th>
+                <th>Hành động</th>
+            </tr>
+            </thead>
+
+            <tbody id="contactList">
+            <!-- JS sẽ render dữ liệu liên hệ tại đây -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

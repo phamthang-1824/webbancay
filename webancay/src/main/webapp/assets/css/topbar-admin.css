@@ -1,0 +1,55 @@
+
+.topbar{
+    margin-left: 230px;
+    padding: 10px 20px 20px 20px;
+    font-family: Arial, sans-serif;
+    /*margin-top: 10px;*/
+    /*flex-direction: column;*/
+    /*align-items: stretch;*/
+}
+.controls{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+.search{
+    height: 44px;
+    width: 280px;
+    padding: 0 14px;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    font-size: 14px;
+    outline: none;
+
+    /*border: 1px solid #e6eef5;*/
+    /*border-radius: 999px;*/
+}
+
+.controls .btn{
+    height: 44px;
+    padding: 0 22px;        /* quyết định độ rộng nút */
+    border: none;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;   /* không xuống dòng */
+    width: auto;           /* phụ thuộc nội dung */
+}
+
+/*.btn{*/
+/*    height: 35px;*/
+/*    background: #0ea5a1;*/
+/*    color: #fff;*/
+/*    border: none;*/
+/*    border-radius: 999px;*/
+/*    padding: 8px 12px;*/
+/*    cursor: pointer;*/
+/*}*/
+/*.btn.search{*/
+/*    width: 120px;*/
+/*}*/
+/*.btn.add{*/
+/*    width: auto;*/
+/*}*/

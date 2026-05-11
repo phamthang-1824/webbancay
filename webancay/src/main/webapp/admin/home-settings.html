@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý banner / trang chủ - admin</title>
+
+    <link rel="stylesheet" href="../assets/css/sidebar-admin.css" />
+    <link rel="stylesheet" href="../assets/css/topbar-admin.css" />
+    <link rel="stylesheet" href="../assets/css/home-settings.css" />
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <!-- HEADER -->
+        <header>QL banner</header>
+        <a href="../admin.jsp" class="menu-item">Dashboard</a>
+        <a href="product-manager.html" class="menu-item">Quản lý sản phẩm</a>
+        <a href="category-manager.html" class="menu-item">Quản lý danh mục</a>
+        <a href="order-manager.html" class="menu-item">Quản lý đơn hàng</a>
+        <a href="user-manager.html" class="menu-item">Khách hàng</a>
+        <a href="home-settings.html" class="menu-item">Banner / Trang chủ</a>
+        <a href="contact-manager.html" class="menu-item">Liên hệ</a>
+    </div>
+
+    <!--    QUẢN LÝ BANNER /TRANG CHỦ - home-setting        -->
+    <div class="home-settings page hidden">
+
+        <div class="topbar">
+            <div class="controls">
+                <button id="btnAddBanner" class="btn add">Thêm Banner</button>
+            </div>
+        </div>
+
+        <!-- QUẢN LÝ BANNER -->
+        <div class="banner-area">
+
+            <!-- Danh sách banner -->
+            <table class="banner-table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ảnh Banner</th>
+                    <th>Tiêu đề</th>
+                    <th>Mô tả</th>
+                    <th>Liên kết</th>
+                    <th>Hành động</th>
+                </tr>
+                </thead>
+
+                <tbody id="bannerList">
+                <!-- JS render banners tại đây -->
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <!-- QUẢN LÝ GIỚI THIỆU -->
+        <div class="intro-settings">
+
+            <h3>Nội dung giới thiệu</h3>
+
+            <textarea id="introText" rows="5" placeholder="Nhập nội dung giới thiệu trang chủ..."></textarea>
+
+            <button id="saveIntro" class="btn save">Lưu nội dung giới thiệu</button>
+        </div>
+
+        <hr>
+
+        <!-- QUẢN LÝ DỊCH VỤ -->
+        <div class="service-settings">
+            <h3>Dịch vụ nổi bật (Home Services)</h3>
+
+            <ul id="serviceList">
+                <!-- JS render -->
+            </ul>
+
+            <button id="btnAddService" class="btn add">Thêm dịch vụ</button>
+        </div>
+
+        <hr>
+
+        <!-- QUẢN LÝ SLOGAN -->
+        <div class="slogan-settings">
+            <h3>Slogan / Thông báo</h3>
+            <input type="text" id="homeSlogan" placeholder="Nhập slogan...">
+            <button id="saveSlogan" class="btn save">Lưu slogan</button>
+        </div>
+    </div>
+</body>
+</html>

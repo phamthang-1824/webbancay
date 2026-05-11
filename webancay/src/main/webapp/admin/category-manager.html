@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý danh mục - Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/sidebar-admin.css"/>
+    <link rel="stylesheet" href="../assets/css/topbar-admin.css"/>
+    <link rel="stylesheet" href="../assets/css/category-manager.css"/>
+    <link rel="stylesheet" href="../assets/css/formAdd.css"/>
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <!-- HEADER -->
+        <header>QL danh mục</header>
+        <a href="../admin.jsp" class="menu-item">Dashboard</a>
+        <a href="product-manager.html" class="menu-item">Quản lý sản phẩm</a>
+        <a href="category-manager.html" class="menu-item">Quản lý danh mục</a>
+        <a href="order-manager.html" class="menu-item">Quản lý đơn hàng</a>
+        <a href="user-manager.html" class="menu-item">Khách hàng</a>
+        <a href="home-settings.html" class="menu-item">Banner / Trang chủ</a>
+        <a href="contact-manager.html" class="menu-item">Liên hệ</a>
+    </div>
+
+    <!--    QUẢN LÝ DANH MỤC - category-->
+    <div class="category-management page">
+        <div class="topbar">
+            <div class="controls">
+                <input type="text" class="search" id="searchCategory" placeholder="Tìm danh mục...">
+                <button class="btn search">Tìm kiếm</button>
+                <button id="btnAddCategory" class="btn add">Thêm danh mục</button>
+
+            </div>
+        </div>
+
+        <!-- Bảng danh mục -->
+        <table class="category-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên danh mục</th>
+                <th>Mô tả</th>
+                <th>Số lượng sản phẩm</th>
+                <th>Hành động</th>
+            </tr>
+            </thead>
+
+            <tbody id="categoryList">
+            <!-- JS sẽ render danh mục vào đây -->
+            </tbody>
+        </table>
+    </div>
+
+<!--        FORM THÊM DANH MỤC SẢN PHẨM         -->
+    <div id="addCategoryForm" class="form-container hidden">
+        <h2>Thêm danh mục sản phẩm</h2>
+
+        <form class="form" id="categoryForm">
+            <div class="form-group">
+                <label for="categoryId">Mã danh mục</label>
+                <input type="text" id="categoryId" placeholder="VD: CAT01">
+            </div>
+
+            <div class="form-group">
+                <label for="categoryName">Tên danh mục</label>
+                <input type="text" id="categoryName" placeholder="VD: Cây văn phòng">
+            </div>
+
+            <div class="form-group">
+                <label for="categoryDescription">Mô tả danh mục</label>
+                <textarea id="categoryDescription" rows="4"
+                          placeholder="Mô tả ngắn về danh mục..."></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" id="cancelCategory" class="btn cancel">Hủy</button>
+                <button type="submit" class="btn submit">Thêm danh mục</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../assets/js/category-manager.js"></script>
+
+</body>
+</html>
