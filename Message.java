@@ -4,11 +4,11 @@ import java.util.Date;
 
 public class Message {
     private int id;
-    private int userId;
-    private String sender; // "user" hoặc "shop"
+    private int userId;       // map từ user_id AS userId
+    private String sender;    // "user" hoặc "shop"
     private String content;
-    private Date createdAt;
-    private int isRead;
+    private Date createdAt;   // map từ created_at AS createdAt
+    private int isRead;       // map từ is_read AS isRead
 
     public Message() {}
 
