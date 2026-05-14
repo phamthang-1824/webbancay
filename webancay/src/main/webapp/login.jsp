@@ -259,6 +259,28 @@
                         </div>
                     </div>
                 </form>
+
+                <!-- NÚT ĐĂNG NHẬP BẰNG GOOGLE -->
+                <div style="margin-top: 16px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                        <hr style="flex: 1; border: none; border-top: 1px solid #ddd;">
+                        <span style="padding: 0 12px; color: #999; font-size: 13px;">hoặc tiếp tục với</span>
+                        <hr style="flex: 1; border: none; border-top: 1px solid #ddd;">
+                    </div>
+                    <a href="${pageContext.request.contextPath}/login/google"
+                       style="display: flex; align-items: center; justify-content: center; gap: 10px;
+                              width: 100%; padding: 12px; background: #fff; border: 1px solid #ddd;
+                              border-radius: 6px; text-decoration: none; color: #333; font-size: 14px;
+                              font-weight: 500; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+                              transition: box-shadow 0.2s; box-sizing: border-box;"
+                       onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.15)'"
+                       onmouseout="this.style.boxShadow='0 1px 3px rgba(0,0,0,0.08)'">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                             width="20" height="20" alt="Google logo">
+                        Đăng nhập bằng Google
+                    </a>
+                </div>
+
             </div>
         </div>
     </main>
@@ -327,7 +349,7 @@
     </footer>
 </div>
 
-<!-- POPUP ĐĂNG NHẬP THÀNH CÔNG - GIỐNG NHƯ REGISTER -->
+<!-- POPUP ĐĂNG NHẬP THÀNH CÔNG -->
 <div class="success-popup
 <c:if test='${not empty loginSuccess and loginSuccess}'>show
 </c:if>" id="successPopup">
@@ -341,7 +363,7 @@
     </div>
 </div>
 
-<!-- TỰ ĐỘNG CHUYỂN HƯỚNG SAU 3 GIÂY - ĐẶT SAU POPUP -->
+<!-- TỰ ĐỘNG CHUYỂN HƯỚNG SAU 3 GIÂY -->
 <c:if test="${not empty loginSuccess and loginSuccess}">
     <meta http-equiv="refresh" content="3;url=index.jsp">
 </c:if>

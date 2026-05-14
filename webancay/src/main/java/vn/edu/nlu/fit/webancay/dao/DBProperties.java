@@ -33,4 +33,15 @@ public class DBProperties {
     public static String getDbName() {
         return prop.get("db.databaseName").toString();
     }
+    public static String getGoogleClientId() {
+        return prop.get("google.clientId").toString();
+    }
+
+    public static String getGoogleClientSecret() {
+        return prop.get("google.clientSecret").toString();
+    }
+
+    public static String getGoogleRedirectUri() {
+        return prop.get("google.redirectUri").toString();
+    }
 }

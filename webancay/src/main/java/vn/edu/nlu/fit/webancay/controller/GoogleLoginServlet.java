@@ -26,8 +26,8 @@ public class GoogleLoginServlet extends HttpServlet {
                 + "?client_id=" + clientId
                 + "&redirect_uri=" + redirectUri
                 + "&response_type=code"
-                + "&scope=" + SCOPE.replace(" ", "%20");
-
+                + "&scope=" + SCOPE.replace(" ", "%20")
+                + "&prompt=select_account";
         response.sendRedirect(url);
     }
 }
